@@ -1,0 +1,189 @@
+// PARTIALS =============================
+@import "./partials/setup";
+@import "./partials/visually-hidden";
+@import "./partials/skip-link";
+
+// VARIABLES =============================
+// COLORS *********
+
+$color-1: #265E73;
+$color-2: #CAEEF1;
+$color-3: #9D346E;
+$color-4: #FEFBFD;
+$color-5: #232323;
+
+
+// FONTS **********
+$font-1: 'Cinzel';
+$font-2: 'Raleway';
+
+
+// GENERAL PAGE STYLING ===================
+
+html {
+    font-size: 62.5%;
+    font-family: 'Cinzel', serif;
+    font-family: 'Raleway', sans-serif;
+}
+
+.wrapper {
+    max-width: 1280;
+    width: 90%;
+    margin: 0 auto;
+}
+
+img {
+    width: 100%;   
+}
+
+* {
+    // border: 1px solid red;
+}
+
+
+// BODY STYLING ============================
+
+.header,
+.mainQuiz,
+.resultsArea {
+    height: 95vh;
+    display: flex;
+    padding: 3rem 0;
+    
+
+}
+
+.header {
+    background-color: $color-1;
+    color: $color-4;
+    text-align: center;
+    align-items: center;
+}
+
+.mainQuiz {
+    background-color: $color-2;
+
+}
+
+.resultsArea {
+    background-color: $color-1;
+    color: $color-4;
+}
+
+h1,
+h2, 
+p {
+    padding: 1rem;
+
+}
+
+h1,
+h2 {
+    font-family: $font-1;
+    margin: 2rem 0;
+    line-height: 4.5rem;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+h2 {
+    font-size: 4.5rem;    
+}
+
+p {
+    font-size: 2.5rem;
+    font-family: $font-2;
+    padding: 1rem 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 2rem 1rem;
+    margin: 1rem;
+    font-weight: 600;
+}
+
+.resultsBtn {
+    background-color: $color-3;
+    color: $color-4;
+
+    &:hover {
+        box-shadow: 6px 6px 5px #ccc;
+    }
+}
+
+
+ul {
+    padding-left: 0;
+    margin: 0;
+
+    li {
+        list-style: none;
+    }
+}
+
+
+
+// HEADER =========================
+
+.header {
+
+    .cookieStartBtn {
+        width: 40%;
+        padding: 2rem;
+    }    
+
+}
+
+
+// MAIN QUIZ AREA ===================
+
+.mainQuizContent {
+    display: flex;
+    justify-content: space-between;
+    
+    .mainQuizImg {
+        width: 40%;
+        height: 80%;
+    }
+
+
+.mainQuizQuestionList {
+    width: 60%;
+    
+    .mainQuizQuestions {
+        
+        .question {
+            padding: 4rem 0;
+        }
+        
+        .answer {
+            padding: 2rem;
+        }
+        
+    }
+}
+
+    .mainQuizSubmitBtn {
+        text-align: center
+        ;
+        .resultsBtn {
+            display: inline-block;
+            // width: 
+        }
+    }
+   
+}
+
+
+
+
+
+
+
+
+
