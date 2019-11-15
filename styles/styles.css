@@ -222,6 +222,10 @@ img {
   width: 100%;
 }
 
+* {
+  border: 1px solid red;
+}
+
 .header,
 .mainQuiz,
 .resultsArea {
@@ -257,7 +261,8 @@ p {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   font-family: "Cinzel";
   margin: 2rem 0;
   line-height: 4.5rem;
@@ -305,8 +310,18 @@ ul li {
   list-style: none;
 }
 
-.header .cookieStartBtn {
-  width: 40%;
+.headerImgLink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.headerImgLink .cookieStartBtn {
+  width: 30%;
   padding: 2rem;
 }
 

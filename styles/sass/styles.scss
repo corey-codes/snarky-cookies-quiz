@@ -37,7 +37,7 @@ img {
 }
 
 * {
-    // border: 1px solid red;
+    border: 1px solid red;
 }
 
 
@@ -78,7 +78,8 @@ p {
 }
 
 h1,
-h2 {
+h2,
+h3 {
     font-family: $font-1;
     margin: 2rem 0;
     line-height: 4.5rem;
@@ -130,10 +131,12 @@ ul {
 
 // HEADER =========================
 
-.header {
+.headerImgLink {
+    display: flex;
+    flex-direction: column;
 
     .cookieStartBtn {
-        width: 40%;
+        width: 30%;
         padding: 2rem;
     }    
 
