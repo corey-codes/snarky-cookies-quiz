@@ -15,7 +15,7 @@ cookieQuiz.availableQuestions = [];
 const answer1Value = 1;
 const answer2Value = 2;
 const answer3Value = 3;
-const answer4Value = 4;
+
 
 const maxQuestions = 5;
 
@@ -24,114 +24,117 @@ const maxQuestions = 5;
 
 const quizContent = [
     {
-        question: "question 1",
-        answer1: "answer1 here",
-        answer2: "answer2 here",
-        answer3: "answer3 here",
-        answer4: "answer4 here"
+        question: "What's your favourite holiday?",
+        answer1: "Christmas is the most wonderful time of the year",
+        answer2: "National Avocado Day",
+        answer3: "Gobble gobble!  Bring on Thanksgiving!",
+        answer4: "Kick a ginger day, it's a thing, look it up.",
     },
 
     {
-        question: "question 2",
-        answer1: "answer1 here",
-        answer2: "answer2 here",
-        answer3: "answer3 here",
-        answer4: "answer4 here"
+        question: "What's your go-to breakfast?",
+        answer1: "Pancakes",
+        answer2: "Avocado toast",
+        answer3: "Uh, I usually skip that",
+        answer4: "Shredded wheat.  Dry",
     },
 
     {
-        question: "question 3",
-        answer1: "answer1 here",
-        answer2: "answer2 here",
-        answer3: "answer3 here",
-        answer4: "answer4 here"
+        question: "What would be your ideal vacation?",
+        answer1: "An all-inclusive resort anywhere hot",
+        answer2: "De-worming stray goats in Nepal",
+        answer3: "Clubbing in Ibeza",
+        answer4: "Big game hunting",
     },
 
     {
-        question: "question 4",
-        answer1: "answer1 here",
-        answer2: "answer2 here",
-        answer3: "answer3 here",
-        answer4: "answer4 here"
+        question: "What's your go-to drink?",
+        answer1: "I'll take a beer",
+        answer2: "Rosé all day!",
+        answer3: "Redbull and vodka",
+        answer4: "The blood of my enemies",
     },
 
     {
-        question: "question 5",
-        answer1: "answer1 here",
-        answer2: "answer2 here",
-        answer3: "answer3 here",
-        answer4: "answer4 here"
+        question: "What do you like to binge on Netflix?",
+        answer1: "Any comedy will do me just fine",
+        answer2: "Mainly health and envrionment documentaries",
+        answer3: "Reality tv anything!",
+        answer4: "True crime shows...especially where people get away with things",
     },
-    {
-        question: "question 6",
-        answer1: "answer1 here",
-        answer2: "answer2 here",
-        answer3: "answer3 here",
-        answer4: "answer4 here"
-    },
-
-    {
-        question: "question 7",
-        answer1: "answer1 here",
-        answer2: "answer2 here",
-        answer3: "answer3 here",
-        answer4: "answer4 here"
-    }
     ];
-console.log(quizContent);
-// *ARRAY INFO PULLING CORRECTLY - yay!!!*
+    console.log(quizContent);
+    // *ARRAY INFO PULLING CORRECTLY - yay!!!*
+
 
 // DOCUMENT READY =======================
 $('document').ready( () => {
+
 
 // START THE ACTUAL GAME =================
     startGame = () => {
         questionCounter = 0;
         score = 0;
+        availableQuestions = [quizContent];
 
         postQuestions();
-    }
-
-    const postQuestions = function() {
-        quizContent.forEach(function(item){
-            console.log(item.question);
-            const quizCopy = 
-            `<li><p>${item.question}</p></li>
-            <li><p>${item.answer1}</p></li>
-            <li><p>${item.answer2}</p></li>
-            <li><p>${item.answer3}</p></li>
-            <li><p>${item.answer4}</p></li>
-            `;
-            // ALL ITEMS LOG
-            console.log(quizContent);
-            // ??WHY IS THIS PULLING UNDEFINED??  
-            console.log(quizContent.question);
-            
-            $('.mainQuizQuestions').append(quizCopy);
-        })
-
-    }
-   
-    // const postQuestions = function(quizContent){
-    //     quizContent.forEach(function(item){
-    //         console.log(item.question, item.answer);
         
-    //         const element = `<p #question>${item.question}</p>
-    //         <p #answer1>${answer1}</p>
-    //         <p #answer2>${answer2}</p>
-    //         <p #answer3>${answer3}</p>
-    //         <p #answer4>${answer4}</p>
+        // PROBABLY DON'T NEED THIS
+        // $(".cookieStartBtn").on("click", function() {
+        //   postQuestions();
+        // });
+        // postQuestions();
+    };
+
+// POST QUESTIONS TO PAGE ===================
+
+    // const postQuestions = function() {
+    //     quizContent.forEach(function(item){
+    //         console.log(item.question);
+    //         const quizCopy = 
+    //         `<li><p>${item.question}</p></li>
+    //         <li><p>${item.answer1}</p></li>
+    //         <li><p>${item.answer2}</p></li>
+    //         <li><p>${item.answer3}</p></li>
+    //         <li><p>${item.answer4}</p></li>
     //         `;
             
-    //         console.log(element);
-
-    //         $('.mainQuizQuestions').append(element);
-        // })
+    //         console.log(quizContent);  
+    //         console.log(quizContent.question);
+            
+    //         $('.mainQuizQuestions').append(quizCopy);
+    //     });
     // }
+        const postQuestions = function() {
+            quizContent.forEach(function(item){
+                // console.log(item);
+                const quizCopy = `
+                    <p#question>${item.question}</p>
+                    <p#answerOption1>${item.answer1}</p>
+                    <p#answerOption2>${item.answer2}</p>
+                    <p#answerOption3>${item.answer3}</p>
+                    <p#answerOption4>${item.answer4}</p>`;
+                    // console.log(item.answer1);  
+                $('#quiz').append(quizCopy);
+            });
+        };
 
-    // $(".cookieStartBtn").on("click", function() {
-    //   postQuestions();
-    // });
+    // };
+    // 'label[for="answer0id"]'
+
+// TO ACCEPT ANSWERS ==========================
+
+
+
+// GO TO RESULTS PAGE ==========================
+    
+    getNewQuestion = () => {
+      if (availableQuestions === 0 || questionCounter >= maxQuestions) {
+        return window.location.assign("#results");
+      }
+    };
+   
+    
 
     //ADD POINTS BASED ON SELECTION
     // DISPLAY RESULTS PAGE BASED ON SCORE

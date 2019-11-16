@@ -67,19 +67,48 @@
 
                 <div class="mainQuizContent">
 
-                    <img class="mainQuizImg" src="./styles/assets/cookieRock.png"
-                        alt="A cartoon chocolate chip cookie character wearing KISS eye makeup in the style of ‎The Demon">
+                    <img class="mainQuizImg" src="./styles/assets/cookieRock.png" alt="A cartoon chocolate chip cookie character wearing KISS eye makeup in the style of ‎The Demon">
 
                     <div class="mainQuizQuestionList">
 
+                    <form id="quiz" name="quiz">
+                        
+                        <p class="question" id="question"></p>
+
+                        <input type="radio" name="answerOption">
+                        <label for="answerOption1">
+                            <p id="answerOption1"></p>
+                        </label>
+
+                        <input type="radio" name="answerOption"> 
+                        <label for="answerOption2">
+                            <p id="answerOption2"></p>
+                        </label>
+
+                        <input type="radio" name="answerOption"> 
+                        <label for="answerOption3">
+                            <p id="answerOption3"></p>
+                        </label>
+
+                        <input type="radio" name="answerOption">
+                        <label for="answerOption4">
+                            <p id="answerOption4"></p>
+                        </label>
+
+                    </form>
+
                         <ul class="mainQuizQuestions">
-                            
-                        <!-- JS TO DYNAMICALLY POPULATE -->
+
+
+                        
+                        
+                        
+                        <!-- jQuery to populate -->
     
                         </ul>
 
                         <div class="mainQuizSubmitBtn">
-                                
+                        
                             <a href="#results" class="btn resultsBtn">Show me my cookie!</a>
                             
                         </div>

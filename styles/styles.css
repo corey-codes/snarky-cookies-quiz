@@ -229,7 +229,6 @@ img {
 .header,
 .mainQuiz,
 .resultsArea {
-  height: 95vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -237,6 +236,7 @@ img {
 }
 
 .header {
+  height: 95vh;
   background-color: #265E73;
   color: #FEFBFD;
   text-align: center;
@@ -277,7 +277,7 @@ h2 {
 }
 
 p {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-family: "Raleway";
   padding: 1rem 0;
   margin: 0;
