@@ -1,27 +1,27 @@
 // NAMESPACING =========================
 const cookieQuiz = {};
 
-cookieQuiz.question;
-cookieQuiz.answer;
+// // cookieQuiz.question;
+// // cookieQuiz.answer;
 
-cookieQuiz.userScore = 0;
-cookieQuiz.questionCounter = 0;
+// cookieQuiz.userScore = 0;
+// cookieQuiz.questionCounter = 0;
 
-cookieQuiz.currentQuestions = {};
-cookieQuiz.availableQuestions = [];
+// cookieQuiz.currentQuestion = {};
+// cookieQuiz.availableQuestions = []
 
 // SCORING DATA ==========================
 
 const maxQuestions = 5;
 
-const answer1Value = 1;
-const answer2Value = 2;
-const answer3Value = 3;
-const answer4Value = 4;
-
+// const answer1Value = 1;
+// const answer2Value = 2;
+// const answer3Value = 3;
+// const answer4Value = 4;
 
 // RESULTS DATA ============================
 // ??? SHOULD I SWTICH THIS TO AN OBJECT IN AN OBJECT SO I CAN NAME EACH RESULT OR JUST USE THE ARRAY INDEX??????
+
 const quizResults = [
     {
         cookie: "Chocolate Chip Cookie",
@@ -49,70 +49,118 @@ const quizResults = [
 
 ];
     // console.log(quizResults);
-    // *ARRAY INFO PULLING CORRECTLY - yay!!!*
-
 
 // DOCUMENT READY =======================
+
 $('document').ready( () => {
 
 // CLEAR RADIO BUTTON SELECTION ON PG REFRESH ===
+    $(':radio').prop('checked', false);
 
+// SCORING OBJECT ===========================
 
+    const tally = {
+        answerQ1: 0,
+        answerQ2: 0,
+        answerQ3: 0,
+        answerQ4: 0
+    };
 
 // START THE ACTUAL GAME =================
     startGame = () => {
-        questionCounter = 0;
-        score = 0;
-        
-
-
+        cookieQuiz.userScore = 0;
+        cookieQuiz.questionCounter = 0;
     };
-
-
 
 // USER ANSWER SELECTION 
-// STORE SCORE FOR SELECTED ANSWER ==========
-
-    $('.quiz').on('click', function() {
-        const score = $(this).find('input:radio:checked')
+// STORE SCORE FOR SELECTED ANSWER 
+// PREVENT DEFAULT SUBMIT =======================
         
+    $(".quiz").on('submit', function(e) {
+        e.preventDefault();
+        console.log('submit');
+      
+        const answerQ1 = e.target.elements.answerQ1.value;
+        const answerQ2 = e.target.elements.answerQ2.value;
+        const answerQ3 = e.target.elements.answerQ3.value;
+        const answerQ4 = e.target.elements.answerQ4.value;
+        const answerQ5 = e.target.elements.answerQ4.value;
+
+
+        
+        // console.log(answerQ1);
+        // console.log(answerQ2);
+        // console.log(answerQ3);
+        // console.log(answerQ4);
+        // console.log(answerQ5);
+        console.log(tally);
+
+    }); //END OF SCORE FUNCTION
+
+    // $('submit').on('click', function (e) {
+    //     e.preventDefault();
+    //     var answers = $('form').find('input:radio:checked');
+    //     if (answers.length === 5) {
+    //         var scoresKeys = Object.keys(tally);
+    //         var scoresArray = scoresKeys.map(function (key) {
+    //             return {
+    //                 value: key,
+    //                 score: tally[key]
+    //             }
+    //         });
+    //         scoresArray.sort(function (a, b) {
+    //             return b.score - a.score;
+
+
+  
+    
+
+// CHANGE TALLY OF ANSWERS FROM OBJECT TO ARRAY & SORT FROM HIGHEST TO LOWEST 
+    $("#resultsBtn").on('click', function(e){
+        e.preventDefault();
+        let answers = $(".quiz").find
+        ('input:radio:checked');
+        if (answers.length === 5) {
+            var scoreKeys = object.keys(tally);
+            var scoresArray = scoresKey.map
+            (function(key) {
+                return {
+                    value: key,
+                    score: tally[key]
+                };
+            });
+            scoresArray.sort(function(a, b) {
+                return b.score - a.score;
+            });
+        }
     })
-    
-
-
-    // window.onload = function () {
-    //     clearItForm.reset('input:radio:unchecked');
-    // };
 
 
 
-// GO TO RESULTS PAGE ==========================
-    
-    getNewQuestion = () => {
-      if (availableQuestions === 0 || questionCounter >= maxQuestions) {
-        return window.location.assign("#results");
-      }
-    };
+
+
+
+
 
 // POST RESULTS TO PAGE ===================
 
-    // const postQuestions = function() {
-    //     quizContent.forEach(function(item){
-    //         console.log(item.question);
-    //         const quizCopy = 
-    //         `<li><p>${item.question}</p></li>
-    //         <li><p>${item.answer1}</p></li>
-    //         <li><p>${item.answer2}</p></li>
-    //         <li><p>${item.answer3}</p></li>
-    //         <li><p>${item.answer4}</p></li>
-    //         `;
+    const quizResults = function() {
+        quizResults.forEach(function(item){
+            console.log(item.summary);
+            const quizCopy = 
+            `<li><p>${item.summary}</p></li>
+            <li><p>${item.answer1}</p></li>
+            <li><p>${item.answer2}</p></li>
+            <li><p>${item.answer3}</p></li>
+            <li><p>${item.answer4}</p></li>
+            `;
 
-    //         console.log(quizContent);  
-    //         console.log(quizContent.question);
+            console.log(quizResults);  
+            console.log(quizContent.summary);
 
-    //         $('.mainQuizQuestions').append(quizCopy);
-    //     });
-    // }
+            $('.quizRestuls').append(resultsContent);
+        });
+    }
    
     
 
@@ -120,4 +168,5 @@ $('document').ready( () => {
     // DISPLAY RESULTS PAGE BASED ON SCORE
     
     startGame(); 
-}); // END OF DOC READY
+
+}); 
