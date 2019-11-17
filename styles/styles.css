@@ -222,10 +222,6 @@ img {
   width: 100%;
 }
 
-* {
-  border: 1px solid red;
-}
-
 .header,
 .mainQuiz,
 .resultsArea {
@@ -337,18 +333,24 @@ ul li {
 .mainQuizContent .mainQuizImg {
   width: 40%;
   height: 80%;
+  padding-right: 1.2rem;
 }
 
 .mainQuizContent .mainQuizQuestionList {
   width: 60%;
 }
 
-.mainQuizContent .mainQuizQuestionList .mainQuizQuestions .question {
-  padding: 4rem 0;
+.mainQuizContent .mainQuizQuestionList .quiz .question {
+  font-weight: 600;
 }
 
-.mainQuizContent .mainQuizQuestionList .mainQuizQuestions .answer {
-  padding: 2rem;
+.mainQuizContent .mainQuizQuestionList .quiz .answerContent {
+  padding-bottom: 2rem;
+}
+
+.mainQuizContent .mainQuizQuestionList .quiz .answerOption {
+  font-size: 1.7rem;
+  padding: .5rem 0;
 }
 
 .mainQuizContent .mainQuizSubmitBtn {

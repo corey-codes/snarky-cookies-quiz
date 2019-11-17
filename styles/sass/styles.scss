@@ -37,7 +37,7 @@ img {
 }
 
 * {
-    border: 1px solid red;
+    // border: 1px solid red;
 }
 
 
@@ -148,30 +148,36 @@ ul {
     .mainQuizImg {
         width: 40%;
         height: 80%;
+        padding-right: 1.2rem;
     }
 
 
     .mainQuizQuestionList {
         width: 60%;
-    
-        .mainQuizQuestions {
-            
-            .question {
-                padding: 4rem 0;
+
+        .quiz {
+
+            .question{
+                font-weight: 600;
+            }
+
+            .answerContent{
+                padding-bottom: 2rem;
+            }
+
+            .answerOption {
+            font-size: 1.7rem;
+            padding: .5rem 0;
             }
             
-            .answer {
-                padding: 2rem;
-            }  
         }
     }
 
     .mainQuizSubmitBtn {
-        text-align: center
-        ;
+        text-align: center;
+        
         .resultsBtn {
-            display: inline-block;
-            // width: 
+            display: inline-block; 
         }
     }
 }
