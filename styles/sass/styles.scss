@@ -106,8 +106,11 @@ a {
 }
 
 .resultsBtn {
+    border: none;
     background-color: $color-3;
     color: $color-4;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
 
     &:hover {
         box-shadow: 6px 6px 5px #ccc;
@@ -140,7 +143,13 @@ ul {
     .cookieStartBtn {
         width: 30%;
         padding: 2rem;
-    }    
+    }
+    
+    a {
+        color: $color-4;
+        text-transform: uppercase;
+        text-align: center;
+    }
 }
 
 
@@ -181,8 +190,11 @@ ul {
     .mainQuizSubmitBtn {
         text-align: center;
         
+        input button {
+            font-size: 2rem;
+        }
         .resultsBtn {
-            display: inline-block; 
+            display: inline-block;
         }
     }
 }

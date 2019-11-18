@@ -288,8 +288,11 @@ a {
 }
 
 .resultsBtn {
+  border: none;
   background-color: #9D346E;
   color: #FEFBFD;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
 }
 
 .resultsBtn:hover {
@@ -297,13 +300,16 @@ a {
           box-shadow: 6px 6px 5px #ccc;
 }
 
-.warning,
+.pleaseAnswer {
+  color: #9D346E;
+  font-weight: 600;
+}
+
 ul {
   padding-left: 0;
   margin: 0;
 }
 
-.warning li,
 ul li {
   list-style: none;
 }
@@ -321,6 +327,12 @@ ul li {
 .headerImgLink .cookieStartBtn {
   width: 30%;
   padding: 2rem;
+}
+
+.headerImgLink a {
+  color: #FEFBFD;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .mainQuizContent {
@@ -357,6 +369,10 @@ ul li {
 
 .mainQuizContent .mainQuizSubmitBtn {
   text-align: center;
+}
+
+.mainQuizContent .mainQuizSubmitBtn input button {
+  font-size: 2rem;
 }
 
 .mainQuizContent .mainQuizSubmitBtn .resultsBtn {
