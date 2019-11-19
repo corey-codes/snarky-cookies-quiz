@@ -48,6 +48,7 @@ img {
 .resultsArea {
     display: flex;
     padding: 3rem 0;
+    
 }
 
 .header {
@@ -58,6 +59,11 @@ img {
     align-items: center;
 }
 
+.quizHeader,
+.resultsHeader {
+    margin: 2rem 0 4rem 0;
+}
+
 .mainQuiz {
     background-color: $color-2;
 
@@ -66,6 +72,7 @@ img {
 .resultsArea {
     background-color: $color-1;
     color: $color-4;
+    height: 70vh;
 }
 
 h1,
@@ -76,7 +83,8 @@ p {
 
 h1,
 h2,
-h3 {
+h3,
+.resultCookie {
     font-family: $font-1;
     margin: 2rem 0;
     line-height: 4.5rem;
@@ -90,11 +98,24 @@ h2 {
     font-size: 4.5rem;    
 }
 
+h3 {
+    font-size: 3rem;
+}
+
 p {
-    font-size: 2rem;
+    font-size: 3rem;
     font-family: $font-2;
     padding: 1rem 0;
     margin: 0;
+}
+
+.italic {
+    font-style: italic;
+    font-size: 2.5rem;
+}
+
+.question {
+    font-size:3rem;
 }
 
 a {
@@ -105,12 +126,23 @@ a {
     font-weight: 600;
 }
 
+label {
+    font-size: 2.5rem;
+}
+
+input[type=radio]{
+    transform: scale(2, 2);
+    margin-right: 1rem;
+}
+
 .resultsBtn {
     border: none;
     background-color: $color-3;
     color: $color-4;
     padding: 1rem 2rem;
     text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 600;
 
     &:hover {
         box-shadow: 6px 6px 5px #ccc;
@@ -155,6 +187,8 @@ ul {
 
 // MAIN QUIZ AREA ===================
 
+
+
 .mainQuizContent {
     display: flex;
     justify-content: space-between;
@@ -168,6 +202,7 @@ ul {
 
     .mainQuizQuestionList {
         width: 60%;
+        padding-left: 2.5rem;
 
         .quiz {
 

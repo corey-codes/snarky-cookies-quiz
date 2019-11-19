@@ -241,6 +241,11 @@ img {
           align-items: center;
 }
 
+.quizHeader,
+.resultsHeader {
+  margin: 2rem 0 4rem 0;
+}
+
 .mainQuiz {
   background-color: #CAEEF1;
 }
@@ -248,6 +253,7 @@ img {
 .resultsArea {
   background-color: #265E73;
   color: #FEFBFD;
+  height: 70vh;
 }
 
 h1,
@@ -258,7 +264,8 @@ p {
 
 h1,
 h2,
-h3 {
+h3,
+.resultCookie {
   font-family: "Cinzel";
   margin: 2rem 0;
   line-height: 4.5rem;
@@ -272,11 +279,24 @@ h2 {
   font-size: 4.5rem;
 }
 
+h3 {
+  font-size: 3rem;
+}
+
 p {
-  font-size: 2rem;
+  font-size: 3rem;
   font-family: "Raleway";
   padding: 1rem 0;
   margin: 0;
+}
+
+.italic {
+  font-style: italic;
+  font-size: 2.5rem;
+}
+
+.question {
+  font-size: 3rem;
 }
 
 a {
@@ -287,12 +307,24 @@ a {
   font-weight: 600;
 }
 
+label {
+  font-size: 2.5rem;
+}
+
+input[type=radio] {
+  -webkit-transform: scale(2, 2);
+          transform: scale(2, 2);
+  margin-right: 1rem;
+}
+
 .resultsBtn {
   border: none;
   background-color: #9D346E;
   color: #FEFBFD;
   padding: 1rem 2rem;
   text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .resultsBtn:hover {
@@ -352,6 +384,7 @@ ul li {
 
 .mainQuizContent .mainQuizQuestionList {
   width: 60%;
+  padding-left: 2.5rem;
 }
 
 .mainQuizContent .mainQuizQuestionList .quiz .question {

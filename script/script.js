@@ -51,9 +51,6 @@ $('document').ready( () => {
         },
 
     ];
-
-    let chocolateChipSelected;
-    let redVelvetSelected;
     
 // USER ANSWER SELECTION 
 // STORE SCORE FOR SELECTED ANSWER 
@@ -76,124 +73,36 @@ $('document').ready( () => {
             } 
         } 
 
-        if (userChoice.chocolateChip > userChoice.redVelvet && userChoice.chocolateChip > userChoice.gingerbread && userChoice.chocolateChip > userChoice.biscotti) {
-            console.log('Chocolate Chip Wins!');
-            console.log(quizResults[0]);
+// IF ELSE TO COMPARE RESULTS OF OJECTS
+// MUST MAKE SOME OPTIONS >= IN CASE OF A TIE
+// LOG RESULTS WITH TEMPLATE LITERAL EXPRESSIONS
 
-        } else if (userChoice.redVelvet > userChoice.chocolateChip && userChoice.redVelvet > userChoice.gingerbread && userChoice.redVelvet > userChoice.biscotti) {
-            console.log('red velvet wins!');  
+        if (userChoice.chocolateChip >= userChoice.redVelvet && userChoice.chocolateChip >= userChoice.gingerbread && userChoice.chocolateChip > userChoice.biscotti) {
+            $('.resultsContent').append(`
+                <h3 class="resultCookie">${quizResults[0].cookie}</h3>
+                <p class="resultSummary">${quizResults[0].description}</p>`
+            ); 
+
+        } else if (userChoice.redVelvet > userChoice.chocolateChip && userChoice.redVelvet >= userChoice.gingerbread && userChoice.redVelvet > userChoice.biscotti) {  
+            $('.resultsContent').append(`
+                <h3 class="resultCookie">${quizResults[1].cookie}</h3>
+                <p class="resultSummary">${quizResults[1].description}</p>`
+            );
 
         } else if (userChoice.gingerbread > userChoice.chocolateChip && userChoice.gingerbread > userChoice.redVelvet && userChoice.gingerbread > userChoice.biscotti) {
-            console.log('gingerbread wins!');
+            $('.resultsContent').append(`
+                <h3 class="resultCookie">${quizResults[2].cookie}</h3>
+                <p class="resultSummary">${quizResults[2].description}</p>`
+            );
 
-        } else if (userChoice.biscotti > userChoice.chocolateChip && userChoice.biscotti > userChoice.gingerbread && userChoice.biscotti > userChoice.redVelvet) {
-            console.log('biscotti wins!');
+        } else if (userChoice.biscotti >= userChoice.chocolateChip && userChoice.biscotti > userChoice.gingerbread && userChoice.biscotti >= userChoice.redVelvet) {
+            $('.resultsContent').append(`
+                <h3 class="resultCookie">${quizResults[3].cookie}</h3>
+                <p class="resultSummary">${quizResults[3].description}</p>`
+            );
         }
-       
-
-        // let max = Math.max(...arr);
-
-
-
-
-        // function findKey() {
-        //     return Object.keys(arr).find(key => arr[max] === value);
-        // }; 
-        // findKey()
     
-        });
-
-
-        
-       
-        // if (chocolateChip = e.target.elements.data-cookie.value) {
-        //     userChoice.chocolateChip++;
-        //     console.log(userChoice.chocolateChip);
-        // } else if (redVelvet = e.target.elements.data-cookie.value) {
-        //     userChoice.redVelvet++;
-        //     console.log(userChoice.redVelvet);
-        // } else if (gingerbread = e.target.elements.data-cookie.value) {
-        //     userChoice.gingerbread++;
-        //     console.log(userChoice.gingerbread);
-        // } else if (biscotti = e.target.elements.data-cookie.value) {
-        //     userChoice.biscotti++;
-        //     console.log(userChoice.biscotti);
-        // }  
-
-        // if (chocolateChipSelected = $('.chocolateChip').attr('checked', true)) {
-        //     userChoice.chocolateChip++;
-        //     console.log('chocolate chip checked!');
-        //     console.log(userChoice.chocolateChip);
-
-        // } else if (redVelvetSelected = $('.redVelvet').attr('checked', true)) {
-        //     userChoice.redVelvet++;
-        //     console.log('redVelvet checked!');
-        //     console.log(userChoice.redVelvet);
-
-        //} //else if (gingerbread = e.target.elements.answerQ1.value) {
-        //     userChoice.gingerbread++;
-        //     console.log(userChoice.gingerbread);
-
-        // } else if (biscotti = e.target.elements.answerQ1.value) {
-        //     userChoice.biscotti++;
-        //     console.log(userChoice.biscotti);
-        // }  
-
-        // if (chocolateChip = e.target.elements.answerQ2.value) {
-        //     userChoice.chocolateChip++;
-        //     console.log(userChoice.chocolateChip);
-        // } else if (redVelvet = e.target.elements.answerQ2.value) {
-        //     userChoice.redVelvet++;
-        //     console.log(userChoice.redVelvet);
-        // } else if (gingerbread = e.target.elements.answerQ2.value) {
-        //     userChoice.gingerbread++;
-        //     console.log(userChoice.gingerbread);
-        // } else if (biscotti = e.target.elements.answerQ2.value) {
-        //     userChoice.biscotti++;
-        //     console.log(userChoice.biscotti);
-        // }  
-
-
-
-
-        // userChoice.answerQ1 = e.target.elements.answerQ1.value;
-        // userChoice.answerQ2 = e.target.elements.answerQ2.value;
-        // userChoice.answerQ3 = e.target.elements.answerQ3.value;
-        // userChoice.answerQ4 = e.target.elements.answerQ4.value;
-        // userChoice.answerQ5 = e.target.elements.answerQ5.value; 
-        // console.log(userChoice.answerQ1);
-        // userAnswerQ1 = e.target.elements.answerQ1.value;
-        // userAnswerQ2 = e.target.elements.answerQ2.value;
-        // userAnswerQ3 = e.target.elements.answerQ3.value;
-        // userAnswerQ4 = e.target.elements.answerQ4.value;
-        // userAnswerQ5 = e.target.elements.answerQ5.value;     
-
-
-// TO FIND THE MOST SELECTED OPTION USE REDUCE FUNCTION WITH ACCUMULATOR & CURRENTVALUE ARGUMENTS 
-
-        // const userAnswer = $(this).find('input:radio:checked').attr('value');
-        //     if (userAnswer) {
-        //         userChoice[userAnswer]++;
-        //         $(this).find('input:submit').attr('disabled', true);
-        //     }
-
-        // const cookie = Object.keys(userChoice).reduce((a, b) => userChoice[a] > userChoice[b] ? a : b);
-        // if (cookie) {
-        //     $('.quizResults').html(`<div id="quizEnd" class="resultContent wrapper"><h2>Here's Your Cookie</h2><h3>${quizResults.cookie.name}</h3><p>${quizResults.cookie.description}</p><img src="${quizResults.cookie.image}"></div>`);
-        // } 
-        
-
-        // const values = Object.entries(userChoice);
-        // console.log(values);
-        
-        // const greatNumPair = values.reduce((acc, cur) => {
-        //     if (acc[1] > cur[1]) {
-        //         return acc;
-        //     }
-        //     return cur;
-        // });
-        
-        // console.log(greatNumPair); // Where greatNumPair[0] is the index with the highest
+    });
 
 // POST RESULTS TO PAGE ===================
 
@@ -215,28 +124,6 @@ $('document').ready( () => {
         //     });
         // }   
     // }); 
-
-    
-
-
-
-    // $('submit').on('click', function (e) {
-    //     e.preventDefault();
-    //     var answers = $('form').find('input:radio:checked');
-    //     if (answers.length === 5) {
-    //         var scoresKeys = Object.keys(tally);
-    //         var scoresArray = scoresKeys.map(function (key) {
-    //             return {
-    //                 value: key,
-    //                 score: tally[key]onst cookie = Object.keys(userChoice).reduce((a, b) => userChoice[a] > userChoice[b] ? a : b);
-    // if (cookie) {
-    //   $('.quizResults').html(`<div id="quizEnd" class="resultContent wrapper"><h2>Here's Your Cookie</h2><h3>${quizResults[cookie].name}</h3><p>${quizResults[cookie].description}</p><img src="${quizResults[cookie].image}"></div>`);
-    // } 
-    //             }
-    //         });
-    //         scoresArray.sort(function (a, b) {
-    //             return b.score - a.score;
-    
 
 
 }); 
