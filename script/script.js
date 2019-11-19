@@ -7,7 +7,7 @@ const maxQuestions = 5;
 
 // SCORING OBJECT ===========================
 
-const userChoice =
+const userChoice = 
 {
     chocolateChip: 0,
     redVelvet: 0,
@@ -51,6 +51,9 @@ $('document').ready( () => {
         },
 
     ];
+
+    let chocolateChipSelected;
+    let redVelvetSelected;
     
 // USER ANSWER SELECTION 
 // STORE SCORE FOR SELECTED ANSWER 
@@ -59,20 +62,99 @@ $('document').ready( () => {
     $(".quiz").on('submit', function(e) {
         e.preventDefault();
 
-        if (chocolateChip = e.target.elements.answerQ1.value) {
-            userChoice.chocolateChip++;
-            console.log(userChoice.chocolateChip);
-        } else if (redVelvet = e.target.elements.answerQ1.value) {
-            userChoice.redVelvet++;
-            console.log(userChoice.redVelvet);
-        } else if (gingerbread = e.target.elements.answerQ1.value) {
-            userChoice.gingerbread++;
-            console.log(userChoice.gingerbread);
-        } else if (biscotti = e.target.elements.answerQ1.value) {
-            userChoice.biscotti++;
-            console.log(userChoice.biscotti);
-        }  
-    });
+        let chocolateChipSelected = $('input').hasClass('chocolateChip')
+        console.log(chocolateChipSelected)
+        let choice;
+
+        const result = $(this).find('input:checked')
+        console.log(result);
+        console.log(userChoice);
+        if (result) {
+            // targeting the value in the object
+            for (let i = 0; i < result.length; i++) {
+                userChoice[result[i].value]++;
+            } 
+        } 
+
+        if (userChoice.chocolateChip > userChoice.redVelvet && userChoice.chocolateChip > userChoice.gingerbread && userChoice.chocolateChip > userChoice.biscotti) {
+            console.log('Chocolate Chip Wins!');
+            console.log(quizResults[0]);
+
+        } else if (userChoice.redVelvet > userChoice.chocolateChip && userChoice.redVelvet > userChoice.gingerbread && userChoice.redVelvet > userChoice.biscotti) {
+            console.log('red velvet wins!');  
+
+        } else if (userChoice.gingerbread > userChoice.chocolateChip && userChoice.gingerbread > userChoice.redVelvet && userChoice.gingerbread > userChoice.biscotti) {
+            console.log('gingerbread wins!');
+
+        } else if (userChoice.biscotti > userChoice.chocolateChip && userChoice.biscotti > userChoice.gingerbread && userChoice.biscotti > userChoice.redVelvet) {
+            console.log('biscotti wins!');
+        }
+       
+
+        // let max = Math.max(...arr);
+
+
+
+
+        // function findKey() {
+        //     return Object.keys(arr).find(key => arr[max] === value);
+        // }; 
+        // findKey()
+    
+        });
+
+
+        
+       
+        // if (chocolateChip = e.target.elements.data-cookie.value) {
+        //     userChoice.chocolateChip++;
+        //     console.log(userChoice.chocolateChip);
+        // } else if (redVelvet = e.target.elements.data-cookie.value) {
+        //     userChoice.redVelvet++;
+        //     console.log(userChoice.redVelvet);
+        // } else if (gingerbread = e.target.elements.data-cookie.value) {
+        //     userChoice.gingerbread++;
+        //     console.log(userChoice.gingerbread);
+        // } else if (biscotti = e.target.elements.data-cookie.value) {
+        //     userChoice.biscotti++;
+        //     console.log(userChoice.biscotti);
+        // }  
+
+        // if (chocolateChipSelected = $('.chocolateChip').attr('checked', true)) {
+        //     userChoice.chocolateChip++;
+        //     console.log('chocolate chip checked!');
+        //     console.log(userChoice.chocolateChip);
+
+        // } else if (redVelvetSelected = $('.redVelvet').attr('checked', true)) {
+        //     userChoice.redVelvet++;
+        //     console.log('redVelvet checked!');
+        //     console.log(userChoice.redVelvet);
+
+        //} //else if (gingerbread = e.target.elements.answerQ1.value) {
+        //     userChoice.gingerbread++;
+        //     console.log(userChoice.gingerbread);
+
+        // } else if (biscotti = e.target.elements.answerQ1.value) {
+        //     userChoice.biscotti++;
+        //     console.log(userChoice.biscotti);
+        // }  
+
+        // if (chocolateChip = e.target.elements.answerQ2.value) {
+        //     userChoice.chocolateChip++;
+        //     console.log(userChoice.chocolateChip);
+        // } else if (redVelvet = e.target.elements.answerQ2.value) {
+        //     userChoice.redVelvet++;
+        //     console.log(userChoice.redVelvet);
+        // } else if (gingerbread = e.target.elements.answerQ2.value) {
+        //     userChoice.gingerbread++;
+        //     console.log(userChoice.gingerbread);
+        // } else if (biscotti = e.target.elements.answerQ2.value) {
+        //     userChoice.biscotti++;
+        //     console.log(userChoice.biscotti);
+        // }  
+
+
+
 
         // userChoice.answerQ1 = e.target.elements.answerQ1.value;
         // userChoice.answerQ2 = e.target.elements.answerQ2.value;
