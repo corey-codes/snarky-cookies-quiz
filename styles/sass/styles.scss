@@ -111,7 +111,7 @@ p {
 
 .italic {
     font-style: italic;
-    font-size: 2.5rem;
+    font-size: 1.8rem;
 }
 
 .question {
@@ -173,17 +173,17 @@ ul {
     flex-direction: column;
 
     .cookieStartBtn {
-        width: 25%;
-        padding: 2rem;
+        width: 20%;
+        padding: 1.5rem;
     }
     
     a {
         color: $color-4;
         text-transform: uppercase;
         text-align: center;
+        padding: 0;
     }
 }
-
 
 // MAIN QUIZ AREA ===================
 

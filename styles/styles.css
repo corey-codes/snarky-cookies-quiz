@@ -292,7 +292,7 @@ p {
 
 .italic {
   font-style: italic;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
 }
 
 .question {
@@ -357,14 +357,15 @@ ul li {
 }
 
 .headerImgLink .cookieStartBtn {
-  width: 25%;
-  padding: 2rem;
+  width: 20%;
+  padding: 1.5rem;
 }
 
 .headerImgLink a {
   color: #FEFBFD;
   text-transform: uppercase;
   text-align: center;
+  padding: 0;
 }
 
 .mainQuizContent {
