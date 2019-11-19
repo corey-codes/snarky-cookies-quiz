@@ -28,25 +28,25 @@ $('document').ready( () => {
     const quizResults = [
         {
             cookie: "Chocolate Chip Cookie",
-            description: "Congrats, you're average!  On the up side, you're generally likeable",
+            description: "Congrats, you're average!  On the up side, you're generally likeable and the welcome addition to any get together",
            
         },
 
         {
             cookie: "Red Velvet Chippet Cookie",
-            description: "Well aren't you annoyingly trendy?",
+            description: "Well aren't you annoyingly trendy?  You're exciting at first but people are tend to regret indulging too much in your company",
            
         },
 
         {
             cookie: "Gingerbread Cookie",
-            description: "You're not everyone's cup of tea, but those who like you <em>really</em> like you and those who don't <em>really</em> don't",
+            description: "You're not everyone's cup of tea, but those who like you really like you and those who don't really don't",
             
         },
 
         {
             cookie: "Biscotti",
-            description: "Honestly, people think they like you until they get to know you and they usually regret bringing you to a party",
+            description: "Honestly, people think they like you until they get to know you and they almost always regret bringing you to a party",
            
         },
 
