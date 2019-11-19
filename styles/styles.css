@@ -321,7 +321,7 @@ input[type=radio] {
   border: none;
   background-color: #9D346E;
   color: #FEFBFD;
-  padding: 1rem 2rem;
+  padding: 2rem 3rem;
   text-transform: uppercase;
   font-size: 2rem;
   font-weight: 600;
@@ -410,4 +410,15 @@ ul li {
 
 .mainQuizContent .mainQuizSubmitBtn .resultsBtn {
   display: inline-block;
+}
+
+@media (max-width: 900px) {
+  .mainQuizContent {
+    display: inline-block;
+    text-align: center;
+  }
+  .mainQuizContent .mainQuizQuestionList {
+    margin: 0 auto;
+    text-align: left;
+  }
 }

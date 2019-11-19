@@ -48,7 +48,7 @@ img {
 .resultsArea {
     display: flex;
     padding: 3rem 0;
-    
+
 }
 
 .header {
@@ -139,7 +139,7 @@ input[type=radio]{
     border: none;
     background-color: $color-3;
     color: $color-4;
-    padding: 1rem 2rem;
+    padding: 2rem 3rem;
     text-transform: uppercase;
     font-size: 2rem;
     font-weight: 600;
@@ -235,7 +235,8 @@ ul {
 }
 
 
-
+// MEDIA QUERIES =========================
+@import "./partials/mediaQueries";
 
 
 

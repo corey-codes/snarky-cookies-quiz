@@ -102,28 +102,6 @@ $('document').ready( () => {
             );
         }
     
-    });
+    }); // END OF SCORING & RESULTS
 
-// POST RESULTS TO PAGE ===================
-
-        // const quizResults = function () {
-        //     quizResults.forEach(function (item) {
-        //         console.log(item.summary);
-        //         const quizCopy =
-        //             `<p>${item.summary}</p></li>
-        //             <li><p>${item.answer1}</p></li>
-        //             <li><p>${item.answer2}</p></li>
-        //             <li><p>${item.answer3}</p></li>
-        //             <li><p>${item.answer4}</p></li>
-        //             `;
-
-        //         console.log(quizResults);
-        //         console.log(quizContent.summary);
-
-        //         $('.quizRestuls').append(resultsContent);
-        //     });
-        // }   
-    // }); 
-
-
-}); 
+}); //DOC READY END
