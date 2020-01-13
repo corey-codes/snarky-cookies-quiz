@@ -2,13 +2,19 @@
   .main {
     .quiz {
       &__content {
-        display: inline-block;
+        flex-direction: column;
+        // display: inline-block;
         text-align: center;
       }
 
       &__questionList {
-        margin: 0 auto;
+        width: 90%;
+        // margin: 0 auto;
         text-align: left;
+      }
+
+      &__resultsSubmit {
+        text-align: center;
       }
     }
   }
