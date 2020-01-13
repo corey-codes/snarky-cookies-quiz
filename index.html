@@ -24,29 +24,24 @@
   <body>
     <!-- HEADER -->
     <header class="header">
-      <div class="headerCopy wrapper">
-        <div class="headerContent">
-          <h1 class="headerTitle">
+      <div class="header__container wrapper">
+        <div class="header__content">
+          <h1 class="header__title">
             Snarky Cookies
           </h1>
 
-          <p class="headerIntro">
-            Sugar and spice and anything but nice.
-          </p>
-
-          <p class="headerIntro">
-            See your personality's cookie equivalent.
-          </p>
+          <div class="header__intro">
+            <p>
+              Sugar and spice and anything but nice.
+            </p>
+            <p>
+              See your personality's cookie equivalent.
+            </p>
+          </div>
         </div>
 
-        <div class="headerImgLink">
-          <a href="#mainQuiz" class="btnLink"
-            ><img
-              class="btn cookieStartBtn"
-              src="./styles/assets/skullCookie"
-              alt="A cartoon sugar cookie in the shape of a skull with the brain exposed"
-          /></a>
-          <p class="italic">Click the sugar cookie to play!</p>
+        <div class="header__play">
+          <a href="#main__quiz" class="header__playBtn">Let's Play!</a>
         </div>
       </div>
     </header>
@@ -55,26 +50,20 @@
     <!-- MAIN -->
     <main class="main">
       <!-- QUIZ AREA -->
-      <section class="mainQuiz" id="mainQuiz">
+      <section class="quiz" id="quiz">
         <!-- QUESTION AREA -->
-        <div class="mainQuizArea wrapper">
-          <h2 class="quizHeader">What are you made of?</h2>
+        <div class="quiz__container wrapper">
+          <h2 class="quiz__header">What are you made of?</h2>
 
-          <div class="mainQuizContent">
-            <img
-              class="mainQuizImg"
-              src="./styles/assets/cookieRock.png"
-              alt="A cartoon chocolate chip cookie character wearing KISS eye makeup in the style of ‎The Demon"
-            />
-
-            <div class="mainQuizQuestionList">
-              <form action="" id="quiz" name="quiz" class="quiz">
-                <p class="question" id="question1">
+          <div class="quiz__content">
+            <div class="quiz__questionList">
+              <form action="" id="quizForm" name="quizForm" class="quiz__form">
+                <p class="quiz__question" id="question1">
                   What's your favourite holiday?
                 </p>
 
-                <div class="answerContent">
-                  <div class="answerOption">
+                <div class="quiz__answerContent">
+                  <div class="quiz__answerOption">
                     <input
                       type="radio"
                       name="answerQ1"
@@ -86,7 +75,7 @@
                     >
                   </div>
 
-                  <div class="answerOption">
+                  <div class="quiz__answerOption">
                     <input
                       type="radio"
                       name="answerQ1"
@@ -96,7 +85,7 @@
                     <label for="answer2">National Avocado Day</label>
                   </div>
 
-                  <div class="answerOption">
+                  <div class="quiz__answerOption">
                     <input
                       type="radio"
                       name="answerQ1"
@@ -108,7 +97,7 @@
                     >
                   </div>
 
-                  <div class="answerOption">
+                  <div class="quiz__answerOption">
                     <input
                       type="radio"
                       name="answerQ1"
@@ -121,12 +110,12 @@
                   </div>
                 </div>
 
-                <p class="question" id="question2">
+                <p class="quiz__question" id="question2">
                   What's your go-to breakfast?
                 </p>
 
-                <div class="answerContent">
-                  <div class="answerOption">
+                <div class="quiz__answerContent">
+                  <div class="quiz__answerOption">
                     <input
                       type="radio"
                       name="answerQ2"
@@ -136,7 +125,7 @@
                     <label for="answer1">Pancakes</label>
                   </div>
 
-                  <div class="answerOption">
+                  <div class="quiz__answerOption">
                     <input
                       type="radio"
                       name="answerQ2"
@@ -146,7 +135,7 @@
                     <label for="answer2">Avocado toast</label>
                   </div>
 
-                  <div class="answerOption">
+                  <div class="quiz__answerOption">
                     <input
                       type="radio"
                       name="answerQ2"
@@ -156,7 +145,7 @@
                     <label for="answer3">Uh, I usually skip that</label>
                   </div>
 
-                  <div class="answerOption">
+                  <div class="quiz__answerOption">
                     <input
                       type="radio"
                       name="answerQ2"
@@ -167,12 +156,12 @@
                   </div>
                 </div>
 
-                <p class="question" id="question3">
+                <p class="quiz__question" id="question3">
                   What would be your ideal vacation?
                 </p>
 
-                <div class="answerContent">
-                  <div class="answerOption">
+                <div class="quiz__answerContent">
+                  <div class="quiz__answerOption">
                     <input
                       type="radio"
                       name="answerQ3"
@@ -184,7 +173,7 @@
                     >
                   </div>
 
-                  <div class="answerOption">
+                  <div class="quiz__answerOption">
                     <input
                       type="radio"
                       name="answerQ3"
@@ -194,7 +183,7 @@
                     <label for="answer2">Deworming goats in Nepal</label>
                   </div>
 
-                  <div class="answerOption">
+                  <div class="quiz__answerOption">
                     <input
                       type="radio"
                       name="answerQ3"
@@ -204,7 +193,7 @@
                     <label for="answer3">Clubbing in Ibeza</label>
                   </div>
 
-                  <div class="answerOption">
+                  <div class="quiz__answerOption">
                     <input
                       type="radio"
                       name="answerQ3"
@@ -215,10 +204,12 @@
                   </div>
                 </div>
 
-                <p class="question" id="question4">What's your go-to drink?</p>
+                <p class="quiz__question" id="question4">
+                  What's your go-to drink?
+                </p>
 
-                <div class="answerContent">
-                  <div class="answerOption">
+                <div class="quiz__answerContent">
+                  <div class="quiz__answerOption">
                     <input
                       type="radio"
                       name="answerQ4"
@@ -228,7 +219,7 @@
                     <label for="answer1">I'll take a beer</label>
                   </div>
 
-                  <div class="answerOption">
+                  <div class="quiz__answerOption">
                     <input
                       type="radio"
                       name="answerQ4"
@@ -238,7 +229,7 @@
                     <label for="answer2">Rosé all day!</label>
                   </div>
 
-                  <div class="answerOption">
+                  <div class="quiz__answerOption">
                     <input
                       type="radio"
                       name="answerQ4"
@@ -248,7 +239,7 @@
                     <label for="answer3">Redbull and vodka</label>
                   </div>
 
-                  <div class="answerOption">
+                  <div class="quiz__answerOption">
                     <input
                       type="radio"
                       name="answerQ4"
@@ -257,26 +248,28 @@
                     />
                     <label for="answer4">The blood of my enemies</label>
                   </div>
-
-                  <div class="pleaseAnswer"></div>
+                  <!-- ***** DOUBLE CHECK THIS ******-->
+                  <div class="quiz__pleaseAnswer"></div>
                 </div>
 
-                <p class="question" id="question5">
+                <p class="quiz__question" id="question5">
                   What do you like to binge on Netflix?
                 </p>
 
-                <div class="answerContent">
-                  <div class="answerOption">
+                <div class="quiz__answerContent">
+                  <div class="quiz__answerOption">
                     <input
                       type="radio"
                       name="answerQ5"
                       class="chocolateChip"
                       value="chocolateChip"
                     />
-                    <label for="answer1">Any comedy will do me just fine</label>
+                    <label for="quiz__answer1"
+                      >Any comedy will do me just fine</label
+                    >
                   </div>
 
-                  <div class="answerOption">
+                  <div class="quiz__answerOption">
                     <input
                       type="radio"
                       name="answerQ5"
@@ -288,7 +281,7 @@
                     >
                   </div>
 
-                  <div class="answerOption">
+                  <div class="quiz__answerOption">
                     <input
                       type="radio"
                       name="answerQ5"
@@ -298,7 +291,7 @@
                     <label for="answer3">Reality tv anything!</label>
                   </div>
 
-                  <div class="answerOption">
+                  <div class="quiz__answerOption">
                     <input
                       type="radio"
                       name="answerQ5"
@@ -311,7 +304,7 @@
                     >
                   </div>
 
-                  <div class="pleaseAnswer"></div>
+                  <div class="quiz__pleaseAnswer"></div>
                 </div>
 
                 <!-- <button class="resultsBtn">Submit</button> -->
@@ -327,14 +320,14 @@
       <!--END OF MAIN QUIZ-->
 
       <!-- RESULTS -->
-      <section class="resultsArea" id="results">
-        <div class="results wrapper">
-          <h2 class="resultsHeader">You Are...</h2>
+      <section class="results" id="results">
+        <div class="results__container wrapper">
+          <h2 class="results__header">You Are...</h2>
 
-          <div class="resultsContent" id="resultsContent">
+          <div class="results__content" id="results__content">
             <!-- JQUERY TO POPULATE -->
-            <h3 class="resultCookie"></h3>
-            <p class="resultSummary"></p>
+            <h3 class="results__cookie"></h3>
+            <p class="results__summary"></p>
           </div>
         </div>
       </section>

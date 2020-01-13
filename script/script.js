@@ -50,7 +50,7 @@ $(':radio').prop('checked', false);
 // STORE SCORE FOR SELECTED ANSWER 
 // PREVENT DEFAULT SUBMIT =======================
         
-    $(".quiz").on('submit', function(e) {
+$(".quiz__form").on('submit', function(e) {
         e.preventDefault();
 
         let chocolateChipSelected = $('input').hasClass('chocolateChip')
@@ -72,27 +72,27 @@ $(':radio').prop('checked', false);
 // LOG RESULTS WITH TEMPLATE LITERAL EXPRESSIONS
 
         if (userChoice.chocolateChip >= userChoice.redVelvet && userChoice.chocolateChip >= userChoice.gingerbread && userChoice.chocolateChip > userChoice.biscotti) {
-            $('.resultsContent').html(`
-                <h3 class="resultCookie">${quizResults[0].cookie}</h3>
-                <p class="resultSummary">${quizResults[0].description}</p>`
+            $('.results__content').html(`
+                <h3 class="results__cookie">${quizResults[0].cookie}</h3>
+                <p class="results__summary">${quizResults[0].description}</p>`
             ); 
 
         } else if (userChoice.redVelvet > userChoice.chocolateChip && userChoice.redVelvet >= userChoice.gingerbread && userChoice.redVelvet > userChoice.biscotti) {  
-            $('.resultsContent').html(`
-                <h3 class="resultCookie">${quizResults[1].cookie}</h3>
-                <p class="resultSummary">${quizResults[1].description}</p>`
+            $('.results__content').html(`
+                <h3 class="results__cookie">${quizResults[1].cookie}</h3>
+                <p class="results__summary">${quizResults[1].description}</p>`
             );
 
         } else if (userChoice.gingerbread > userChoice.chocolateChip && userChoice.gingerbread > userChoice.redVelvet && userChoice.gingerbread > userChoice.biscotti) {
-            $('.resultsContent').html(`
-                <h3 class="resultCookie">${quizResults[2].cookie}</h3>
-                <p class="resultSummary">${quizResults[2].description}</p>`
+            $('.results__content').html(`
+                <h3 class="results__cookie">${quizResults[2].cookie}</h3>
+                <p class="results__summary">${quizResults[2].description}</p>`
             );
 
         } else if (userChoice.biscotti >= userChoice.chocolateChip && userChoice.biscotti > userChoice.gingerbread && userChoice.biscotti >= userChoice.redVelvet) {
-            $('.resultsContent').html(`
-                <h3 class="resultCookie">${quizResults[3].cookie}</h3>
-                <p class="resultSummary">${quizResults[3].description}</p>`
+            $('.results__content').html(`
+                <h3 class="results__cookie">${quizResults[3].cookie}</h3>
+                <p class="results__summary">${quizResults[3].description}</p>`
             );
         }
     

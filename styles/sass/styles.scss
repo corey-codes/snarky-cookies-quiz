@@ -3,7 +3,6 @@
 // ==========================
 
 @import "./partials/setup";
-@import "./partials/visually-hidden";
 @import "./partials/skip-link";
 @import "./partials/variables";
 
@@ -13,6 +12,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
   font-family: "Cinzel", serif;
   font-family: "Raleway", sans-serif;
 }
@@ -32,28 +32,17 @@ img {
 // ===========================
 
 .header,
-.mainQuiz,
+.quiz,
 .resultsArea {
   display: flex;
   padding: 3rem 0;
 }
 
-.header {
-  height: 95vh;
-  background-color: $color-1;
-  color: $color-4;
-  text-align: center;
-  align-items: center;
-}
-
-.quizHeader,
+.quiz__header,
 .resultsHeader {
   margin: 2rem 0 6rem 0;
+  padding: 2rem;
   text-align: center;
-}
-
-.mainQuiz {
-  background-color: $color-2;
 }
 
 .resultsArea {
@@ -156,20 +145,53 @@ ul {
 // HEADER
 // ===========================
 
-.headerImgLink {
-  display: flex;
-  flex-direction: column;
+.header {
+  height: 95vh;
+  background-color: $color-1;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.5)),
+    url("../assets/emoji-cookie.jpg");
+  background-size: cover;
+  background-position: center;
+  color: black;
+  text-align: center;
+  align-items: center;
 
-  .cookieStartBtn {
-    width: 20%;
-    padding: 1.5rem;
+  &__container {
+    padding: 2rem 0;
   }
 
-  a {
+  &__content {
+    margin: 1rem;
+  }
+
+  &__intro {
+    font-weight: 600;
+    color: black;
+    margin: 2rem;
+  }
+
+  &__play {
+    margin: 2rem;
+    padding: 2rem;
+  }
+
+  &__playBtn {
+    // background-color: ;
+    width: 20%;
+    margin: 2rem;
+    padding: 1.5rem;
+    border: none;
+    background-color: $color-3;
     color: $color-4;
+    padding: 2rem 3rem;
     text-transform: uppercase;
-    text-align: center;
-    padding: 0;
+    font-size: 2rem;
+    font-weight: 600;
+    border-radius: 10px;
+
+    &:hover {
+      box-shadow: 6px 6px 5px (rgba(0, 0, 0, 0.4));
+    }
   }
 }
 
@@ -177,59 +199,62 @@ ul {
 // MAIN QUIZ AREA
 // ==========================
 
-.mainQuizContent {
-  display: flex;
-  justify-content: space-between;
+.main {
+  .quiz {
+    background-color: $color-1;
+    background-image: url("../assets/med-blue-bite-me-iStock-687565362.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
 
-  .mainQuizImg {
-    width: 40%;
-    height: 80%;
-    padding-right: 1.2rem;
-  }
-
-  .mainQuizQuestionList {
-    width: 60%;
-    padding-left: 2.5rem;
-
-    .quiz {
-      .question {
-        font-weight: 600;
-      }
-
-      .answerContent {
-        padding-bottom: 2rem;
-      }
-
-      .answerOption {
-        display: flex;
-        align-items: baseline;
-        font-size: 1.7rem;
-        padding: 0.5rem 0;
-
-        label {
-          padding-left: 2rem;
-        }
-      }
+    &__content {
+      display: flex;
+      justify-content: flex-end;
+      // justify-content: space-between;
     }
-  }
 
-  .mainQuizSubmitBtn {
-    text-align: center;
-
-    input button {
-      font-size: 2rem;
+    &__questionList {
+      width: 60%;
+      padding-left: 2.5rem;
     }
-    .resultsBtn {
-      display: inline-block;
+
+    &__question {
+      font-weight: 600;
+    }
+
+    &__answerContent {
+      padding-bottom: 2rem;
+    }
+
+    &__answerOption {
+      display: flex;
+      align-items: baseline;
+      font-size: 1.7rem;
+      padding: 0.5rem 0;
+
+      label {
+        padding-left: 2rem;
+      }
     }
   }
 }
+
+.mainQuizSubmitBtn {
+  text-align: center;
+
+  input button {
+    font-size: 2rem;
+  }
+  .resultsBtn {
+    display: inline-block;
+  }
+}
+// }
 
 // ===========================
 // RESULTS
 // ===========================
 
-.resultsArea {
+.results {
   height: 100vh;
 }
 

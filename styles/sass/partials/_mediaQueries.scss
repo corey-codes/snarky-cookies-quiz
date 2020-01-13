@@ -1,12 +1,15 @@
 @media (max-width: 900px) {
-    .mainQuizContent {
+  .main {
+    .quiz {
+      &__content {
         display: inline-block;
         text-align: center;
-        
-        .mainQuizQuestionList {
-            margin: 0 auto;
-            text-align: left;
-        }
+      }
+
+      &__questionList {
+        margin: 0 auto;
+        text-align: left;
+      }
     }
-        
+  }
 }
