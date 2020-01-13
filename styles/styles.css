@@ -208,8 +208,8 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
 
 html {
   font-size: 62.5%;
-  font-family: 'Cinzel', serif;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Cinzel", serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .wrapper {
@@ -233,8 +233,8 @@ img {
 
 .header {
   height: 95vh;
-  background-color: #265E73;
-  color: #FEFBFD;
+  background-color: #265e73;
+  color: #fefbfd;
   text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -243,16 +243,17 @@ img {
 
 .quizHeader,
 .resultsHeader {
-  margin: 2rem 0 4rem 0;
+  margin: 2rem 0 6rem 0;
+  text-align: center;
 }
 
 .mainQuiz {
-  background-color: #CAEEF1;
+  background-color: #caeef1;
 }
 
 .resultsArea {
-  background-color: #265E73;
-  color: #FEFBFD;
+  background-color: #265e73;
+  color: #fefbfd;
   height: 70vh;
 }
 
@@ -268,15 +269,16 @@ h3,
 .resultCookie {
   font-family: "Cinzel";
   margin: 2rem 0;
-  line-height: 4.5rem;
 }
 
 h1 {
-  font-size: 6rem;
+  font-size: 7rem;
+  line-height: 6rem;
 }
 
 h2 {
-  font-size: 4.5rem;
+  font-size: 6rem;
+  line-height: 6rem;
 }
 
 h3 {
@@ -311,7 +313,7 @@ label {
   font-size: 2.5rem;
 }
 
-input[type=radio] {
+input[type="radio"] {
   -webkit-transform: scale(2, 2);
           transform: scale(2, 2);
   margin-right: 1rem;
@@ -319,12 +321,13 @@ input[type=radio] {
 
 .resultsBtn {
   border: none;
-  background-color: #9D346E;
-  color: #FEFBFD;
+  background-color: #9d346e;
+  color: #fefbfd;
   padding: 2rem 3rem;
   text-transform: uppercase;
   font-size: 2rem;
   font-weight: 600;
+  border-radius: 10px;
 }
 
 .resultsBtn:hover {
@@ -333,7 +336,7 @@ input[type=radio] {
 }
 
 .pleaseAnswer {
-  color: #9D346E;
+  color: #9d346e;
   font-weight: 600;
 }
 
@@ -362,7 +365,7 @@ ul li {
 }
 
 .headerImgLink a {
-  color: #FEFBFD;
+  color: #fefbfd;
   text-transform: uppercase;
   text-align: center;
   padding: 0;
@@ -397,8 +400,18 @@ ul li {
 }
 
 .mainQuizContent .mainQuizQuestionList .quiz .answerOption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   font-size: 1.7rem;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
+}
+
+.mainQuizContent .mainQuizQuestionList .quiz .answerOption label {
+  padding-left: 2rem;
 }
 
 .mainQuizContent .mainQuizSubmitBtn {
@@ -411,6 +424,10 @@ ul li {
 
 .mainQuizContent .mainQuizSubmitBtn .resultsBtn {
   display: inline-block;
+}
+
+.resultsArea {
+  height: 100vh;
 }
 
 @media (max-width: 900px) {

@@ -1,5 +1,5 @@
 // NAMESPACING =========================
-const cookieQuiz = {};
+const quiz = {};
 
 // SCORING DATA ==========================
 
@@ -7,21 +7,15 @@ const maxQuestions = 5;
 
 // SCORING OBJECT ===========================
 
-const userChoice = 
-{
+const userChoice = {
     chocolateChip: 0,
     redVelvet: 0,
     gingerbread: 0,
     biscotti: 0,
 };
-// console.log(userChoice);
-
-// DOCUMENT READY =======================
-
-$('document').ready( () => {
 
 // CLEAR RADIO BUTTON SELECTION ON PG REFRESH ===
-    $(':radio').prop('checked', false);
+$(':radio').prop('checked', false);
 
 // RESULTS DATA ============================
 
@@ -52,7 +46,7 @@ $('document').ready( () => {
 
     ];
     
-// USER ANSWER SELECTION 
+// USER ANSWER SELECTION: 
 // STORE SCORE FOR SELECTED ANSWER 
 // PREVENT DEFAULT SUBMIT =======================
         
@@ -73,30 +67,30 @@ $('document').ready( () => {
             } 
         } 
 
-// IF ELSE TO COMPARE RESULTS OF OJECTS
+// IF ELSE TO COMPARE RESULTS OF OBJECTS
 // MUST MAKE SOME OPTIONS >= IN CASE OF A TIE
 // LOG RESULTS WITH TEMPLATE LITERAL EXPRESSIONS
 
         if (userChoice.chocolateChip >= userChoice.redVelvet && userChoice.chocolateChip >= userChoice.gingerbread && userChoice.chocolateChip > userChoice.biscotti) {
-            $('.resultsContent').append(`
+            $('.resultsContent').html(`
                 <h3 class="resultCookie">${quizResults[0].cookie}</h3>
                 <p class="resultSummary">${quizResults[0].description}</p>`
             ); 
 
         } else if (userChoice.redVelvet > userChoice.chocolateChip && userChoice.redVelvet >= userChoice.gingerbread && userChoice.redVelvet > userChoice.biscotti) {  
-            $('.resultsContent').append(`
+            $('.resultsContent').html(`
                 <h3 class="resultCookie">${quizResults[1].cookie}</h3>
                 <p class="resultSummary">${quizResults[1].description}</p>`
             );
 
         } else if (userChoice.gingerbread > userChoice.chocolateChip && userChoice.gingerbread > userChoice.redVelvet && userChoice.gingerbread > userChoice.biscotti) {
-            $('.resultsContent').append(`
+            $('.resultsContent').html(`
                 <h3 class="resultCookie">${quizResults[2].cookie}</h3>
                 <p class="resultSummary">${quizResults[2].description}</p>`
             );
 
         } else if (userChoice.biscotti >= userChoice.chocolateChip && userChoice.biscotti > userChoice.gingerbread && userChoice.biscotti >= userChoice.redVelvet) {
-            $('.resultsContent').append(`
+            $('.resultsContent').html(`
                 <h3 class="resultCookie">${quizResults[3].cookie}</h3>
                 <p class="resultSummary">${quizResults[3].description}</p>`
             );
@@ -104,4 +98,7 @@ $('document').ready( () => {
     
     }); // END OF SCORING & RESULTS
 
-}); //DOC READY END
+// DOCUMENT READY
+$('document').ready(() => {
+
+}); 

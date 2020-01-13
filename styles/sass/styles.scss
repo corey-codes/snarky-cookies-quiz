@@ -1,245 +1,239 @@
-// PARTIALS =============================
+// ==========================
+// PARTIALS
+// ==========================
+
 @import "./partials/setup";
 @import "./partials/visually-hidden";
 @import "./partials/skip-link";
+@import "./partials/variables";
 
-// VARIABLES =============================
-// COLORS *********
-
-$color-1: #265E73;
-$color-2: #CAEEF1;
-$color-3: #9D346E;
-$color-4: #FEFBFD;
-$color-5: #232323;
-
-
-// FONTS **********
-$font-1: 'Cinzel';
-$font-2: 'Raleway';
-
-
-// GENERAL PAGE STYLING ===================
+// ===========================
+// GENERAL PAGE STYLING
+// ===========================
 
 html {
-    font-size: 62.5%;
-    font-family: 'Cinzel', serif;
-    font-family: 'Raleway', sans-serif;
+  font-size: 62.5%;
+  font-family: "Cinzel", serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .wrapper {
-    max-width: 1280;
-    width: 90%;
-    margin: 0 auto;
+  max-width: 1280;
+  width: 90%;
+  margin: 0 auto;
 }
 
 img {
-    width: 100%;   
+  width: 100%;
 }
 
-// * {
-//     border: 1px solid red;
-// }
-
-
-// BODY STYLING ============================
+// ===========================
+// BODY STYLING
+// ===========================
 
 .header,
 .mainQuiz,
 .resultsArea {
-    display: flex;
-    padding: 3rem 0;
-
+  display: flex;
+  padding: 3rem 0;
 }
 
 .header {
-    height: 95vh;
-    background-color: $color-1;
-    color: $color-4;
-    text-align: center;
-    align-items: center;
+  height: 95vh;
+  background-color: $color-1;
+  color: $color-4;
+  text-align: center;
+  align-items: center;
 }
 
 .quizHeader,
 .resultsHeader {
-    margin: 2rem 0 4rem 0;
+  margin: 2rem 0 6rem 0;
+  text-align: center;
 }
 
 .mainQuiz {
-    background-color: $color-2;
-
+  background-color: $color-2;
 }
 
 .resultsArea {
-    background-color: $color-1;
-    color: $color-4;
-    height: 70vh;
+  background-color: $color-1;
+  color: $color-4;
+  height: 70vh;
 }
 
 h1,
-h2, 
+h2,
 p {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 h1,
 h2,
 h3,
 .resultCookie {
-    font-family: $font-1;
-    margin: 2rem 0;
-    line-height: 4.5rem;
+  font-family: $font-1;
+  margin: 2rem 0;
 }
 
 h1 {
-    font-size: 6rem;
+  font-size: 7rem;
+  line-height: 6rem;
 }
 
 h2 {
-    font-size: 4.5rem;    
+  font-size: 6rem;
+  line-height: 6rem;
 }
 
 h3 {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
 p {
-    font-size: 3rem;
-    font-family: $font-2;
-    padding: 1rem 0;
-    margin: 0;
+  font-size: 3rem;
+  font-family: $font-2;
+  padding: 1rem 0;
+  margin: 0;
 }
 
 .italic {
-    font-style: italic;
-    font-size: 1.8rem;
+  font-style: italic;
+  font-size: 1.8rem;
 }
 
 .question {
-    font-size:3rem;
+  font-size: 3rem;
 }
 
 a {
-    text-decoration: none;
-    font-size: 2rem;
-    padding: 2rem 1rem;
-    margin: 1rem;
-    font-weight: 600;
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 2rem 1rem;
+  margin: 1rem;
+  font-weight: 600;
 }
 
 label {
-    font-size: 2.5rem;
+  font-size: 2.5rem;
 }
 
-input[type=radio]{
-    transform: scale(2, 2);
-    margin-right: 1rem;
+input[type="radio"] {
+  transform: scale(2, 2);
+  margin-right: 1rem;
 }
 
 .resultsBtn {
-    border: none;
-    background-color: $color-3;
-    color: $color-4;
-    padding: 2rem 3rem;
-    text-transform: uppercase;
-    font-size: 2rem;
-    font-weight: 600;
+  border: none;
+  background-color: $color-3;
+  color: $color-4;
+  padding: 2rem 3rem;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 600;
+  border-radius: 10px;
 
-    &:hover {
-        box-shadow: 6px 6px 5px #ccc;
-    }
+  &:hover {
+    box-shadow: 6px 6px 5px #ccc;
+  }
 }
 
 .pleaseAnswer {
-    color: $color-3;
-    font-weight: 600;
+  color: $color-3;
+  font-weight: 600;
 }
-
 
 ul {
-    padding-left: 0;
-    margin: 0;
+  padding-left: 0;
+  margin: 0;
 
-    li {
-        list-style: none;
-    }
+  li {
+    list-style: none;
+  }
 }
 
-
-
-// HEADER =========================
+// ===========================
+// HEADER
+// ===========================
 
 .headerImgLink {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    .cookieStartBtn {
-        width: 20%;
-        padding: 1.5rem;
-    }
-    
-    a {
-        color: $color-4;
-        text-transform: uppercase;
-        text-align: center;
-        padding: 0;
-    }
+  .cookieStartBtn {
+    width: 20%;
+    padding: 1.5rem;
+  }
+
+  a {
+    color: $color-4;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0;
+  }
 }
 
-// MAIN QUIZ AREA ===================
-
-
+// ==========================
+// MAIN QUIZ AREA
+// ==========================
 
 .mainQuizContent {
-    display: flex;
-    justify-content: space-between;
-    
-    .mainQuizImg {
-        width: 40%;
-        height: 80%;
-        padding-right: 1.2rem;
-    }
+  display: flex;
+  justify-content: space-between;
 
+  .mainQuizImg {
+    width: 40%;
+    height: 80%;
+    padding-right: 1.2rem;
+  }
 
-    .mainQuizQuestionList {
-        width: 60%;
-        padding-left: 2.5rem;
+  .mainQuizQuestionList {
+    width: 60%;
+    padding-left: 2.5rem;
 
-        .quiz {
+    .quiz {
+      .question {
+        font-weight: 600;
+      }
 
-            .question{
-                font-weight: 600;
-            }
+      .answerContent {
+        padding-bottom: 2rem;
+      }
 
-            .answerContent{
-                padding-bottom: 2rem;
-            }
+      .answerOption {
+        display: flex;
+        align-items: baseline;
+        font-size: 1.7rem;
+        padding: 0.5rem 0;
 
-            .answerOption {
-            font-size: 1.7rem;
-            padding: .5rem 0;
-            }
-            
+        label {
+          padding-left: 2rem;
         }
+      }
     }
+  }
 
-    .mainQuizSubmitBtn {
-        text-align: center;
-        
-        input button {
-            font-size: 2rem;
-        }
-        .resultsBtn {
-            display: inline-block;
-        }
+  .mainQuizSubmitBtn {
+    text-align: center;
+
+    input button {
+      font-size: 2rem;
     }
+    .resultsBtn {
+      display: inline-block;
+    }
+  }
 }
 
+// ===========================
+// RESULTS
+// ===========================
 
-// MEDIA QUERIES =========================
+.resultsArea {
+  height: 100vh;
+}
+
+// ===========================
+// MEDIA QUERIES
+// ============================
 @import "./partials/mediaQueries";
-
-
-
-
-
-
