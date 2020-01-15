@@ -3,20 +3,23 @@ const app = {};
 
 /* =========================================
 
-- ADD EVENT LISTENER TO START BUTTON
+- ADD EVENT LISTENER TO INTERNAL LINKS FOR SCROLL
 - SCROLL TO QUIZ
 
 ========================================= */
 
+const internalLinks = document.querySelectorAll('a[href^="#sectionLInk"');
+
 const playBtn = document.querySelector(".header__playBtn");
 
 const quizSection = document.querySelector("#quiz");
+console.log(quizSection); 
 
-function scrollToQuiz() {
+playBtn.addEventListener('click', function(e) {
+    e.preventDefault();
     quizSection.scrollIntoView();
-}; 
+});
 
-playBtn.addEventListener('click', scrollToQuiz()); 
 
 /* ==========================================
 
@@ -26,7 +29,6 @@ playBtn.addEventListener('click', scrollToQuiz());
 ========================================== */
 
 const userChecked = document.querySelectorAll("input[type='radio']");
-// console.log(userChecked);
 
 window.onload = function() {
     for (let i = 0; i < userChecked.length; i++)
@@ -84,10 +86,14 @@ const quizResults = [
 
 //CONTROL BUTTONS 
 const nextQ = document.querySelector('.quiz__nextBtn'); 
-
-const previousQ = document.querySelector('.quiz__previousBtn'); 
-
+const previousQ = document.querySelector('.quiz__previousBtn');
 const getResults = document.querySelector('quiz__resultsBtn');
+
+const resultsSection = document.querySelector('#results');
+
+nextQ.addEventListener('click', function() {
+    resultsSection.scrollIntoView();
+});
 
 // QUESTIONS
 const q1 = document.querySelector("div.quiz__q1"); 

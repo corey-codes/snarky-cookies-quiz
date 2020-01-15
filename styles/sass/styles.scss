@@ -82,6 +82,7 @@ a {
   padding: 2rem 1rem;
   margin: 1rem;
   font-weight: 600;
+  color: white;
 }
 
 label {
@@ -189,7 +190,7 @@ input[type="radio"] {
       url("../assets/med-2blue-bite-me-iStock-687565362.jpg");
     background-size: contain;
     background-repeat: no-repeat;
-    height: 100vh;
+    // height: 100vh;
 
     &__content {
       display: flex;
@@ -239,7 +240,7 @@ input[type="radio"] {
     }
 
     &__nextBtn {
-      padding: 2rem 50px;
+      // padding: 2rem 50px;
     }
 
     // &__resultsSubmit {

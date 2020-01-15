@@ -288,6 +288,7 @@ a {
   padding: 2rem 1rem;
   margin: 1rem;
   font-weight: 600;
+  color: white;
 }
 
 label {
@@ -451,10 +452,6 @@ input[type="radio"] {
   font-size: 2rem;
 }
 
-.main .quiz__nextBtn {
-  padding: 2rem 50px;
-}
-
 .results {
   height: 100vh;
 }
@@ -475,3 +472,4 @@ input[type="radio"] {
     text-align: center;
   }
 }
+/*# sourceMappingURL=styles.css.map */
