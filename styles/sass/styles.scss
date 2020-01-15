@@ -75,7 +75,6 @@ p {
 .question {
   font-size: 3rem;
 }
-
 a {
   text-decoration: none;
   font-size: 2rem;
@@ -149,12 +148,12 @@ input[type="radio"] {
 
 .header {
   height: 95vh;
-  background-color: $color-1;
+  background-color: $color-1; //backup if background image fails
   background-image: linear-gradient(rgba(255, 255, 255, 0.5)),
     url("../assets/emoji-cookie.jpg");
   background-size: cover;
   background-position: center;
-  color: black;
+  color: $color-5;
   text-align: center;
   align-items: center;
 
@@ -183,19 +182,21 @@ input[type="radio"] {
 // ==========================
 
 .main {
-  background-color: $color-1;
-
   .quiz {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.6)),
-      url("../assets/med-2blue-bite-me-iStock-687565362.jpg");
-    background-size: contain;
-    background-repeat: no-repeat;
+    background-color: #95b9ce;
     // height: 100vh;
 
     &__content {
       display: flex;
-      justify-content: flex-end;
-      // justify-content: space-between;
+      // justify-content: flex-end;
+      justify-content: space-between;
+    }
+
+    &__img {
+      width: 35%;
+      // img {
+      // width: 50%;
+      // }
     }
 
     &__questionList {
@@ -239,9 +240,9 @@ input[type="radio"] {
       }
     }
 
-    &__nextBtn {
-      // padding: 2rem 50px;
-    }
+    // &__nextBtn {
+    // padding: 2rem 50px;
+    // }
 
     // &__resultsSubmit {
     //   padding: 1rem;

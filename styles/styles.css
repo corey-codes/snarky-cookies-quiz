@@ -288,6 +288,7 @@ a {
   padding: 2rem 1rem;
   margin: 1rem;
   font-weight: 600;
+  color: white;
 }
 
 label {
@@ -358,7 +359,7 @@ input[type="radio"] {
   background-image: linear-gradient(rgba(255, 255, 255, 0.5)), url("../assets/emoji-cookie.jpg");
   background-size: cover;
   background-position: center;
-  color: black;
+  color: #000000;
   text-align: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -384,24 +385,21 @@ input[type="radio"] {
   padding: 2rem;
 }
 
-.main {
-  background-color: #0f4c81;
-}
-
 .main .quiz {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.6))), url("../assets/med-2blue-bite-me-iStock-687565362.jpg");
-  background-image: linear-gradient(rgba(255, 255, 255, 0.6)), url("../assets/med-2blue-bite-me-iStock-687565362.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
+  background-color: #95b9ce;
 }
 
 .main .quiz__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .quiz__img {
+  width: 35%;
 }
 
 .main .quiz__questionList {
@@ -449,10 +447,6 @@ input[type="radio"] {
 
 .main .quiz__nextBtn input button, .main .quiz__previousBtn input button, .main .quiz__resultsBtn input button {
   font-size: 2rem;
-}
-
-.main .quiz__nextBtn {
-  padding: 2rem 50px;
 }
 
 .results {
