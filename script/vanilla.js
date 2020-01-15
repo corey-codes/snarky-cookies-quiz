@@ -76,8 +76,9 @@ const quizResults = [
 
 /* ==========================================
 
-- HIDE/UN-HIDE QUESTIONS ON NEXT BTN CLICK
-- STORE USER SELECTION FOR EACH ANSWER
+- SET UP BUTTON CONTROLS
+- SET UP QUESTIONS TO DISPLAY
+- FUNCTIONS TO APPLY TO BUTTONS
 
 ========================================== */
 
@@ -95,16 +96,67 @@ const q3 = document.querySelector("div.quiz__q3");
 const q4 = document.querySelector("div.quiz__q4"); 
 const q5 = document.querySelector("div.quiz__q5"); 
 
+//FUNCTIONS
+
+// function unHide() {
+//     if ()
+//     classList.remove('is-hidden')
+// }
+
+// function next() {
+//    nextQ.addEventListener('click', unHide) 
+// }
+// next();
+
+
+/* ==========================================
+
+- LOG USER SELECTION BY QUESTION
+- ADD USER SELECTION TO TALLY
+
+========================================== */
+
+
 // FORM
 const form = document.querySelector('#quizForm');
+let resultsDiv = document.querySelector('.results__content');
 
-form.onSubmit =  function(e) {
+form.onsubmit =  function(e) {
     e.preventDefault();
 
-    let chocolateChipSelected = userChecked.classList.contains('chocolateChip');
-    console.log(chocolateChipSelected);
-
+    const result = form.querySelectorAll("input[type='radio']:checked")
+    console.log(result);
+    console.log(userChoice);
     
+    if (result) {
+        for (let i = 0; i < result.length; i++ ) {
+            userChoice[result[i].value]++;
+        }
+    } 
+
+    if (userChoice.chocolateChip >= userChoice.redVelvet && userChoice.chocolateChip >= userChoice.gingerbread && userChoice.chocolateChip > userChoice.biscotti) {
+        resultsDiv.innerHTML = (`
+            <h3 class="results__cookie">${quizResults[0].cookie}</h3>
+            <p class="results__summary">${quizResults[0].description}</p>`
+        );
+    } else if (userChoice.redVelvet > userChoice.chocolateChip && userChoice.redVelvet >= userChoice.gingerbread && userChoice.redVelvet > userChoice.biscotti) {
+        resultsDiv.innerHTML = (`
+                <h3 class="results__cookie">${quizResults[1].cookie}</h3>
+                <p class="results__summary">${quizResults[1].description}</p>`
+        );
+
+    } else if (userChoice.gingerbread > userChoice.chocolateChip && userChoice.gingerbread > userChoice.redVelvet && userChoice.gingerbread > userChoice.biscotti) {
+        resultsDiv.innerHTML = (`
+                <h3 class="results__cookie">${quizResults[2].cookie}</h3>
+                <p class="results__summary">${quizResults[2].description}</p>`
+        );
+
+    } else if (userChoice.biscotti >= userChoice.chocolateChip && userChoice.biscotti > userChoice.gingerbread && userChoice.biscotti >= userChoice.redVelvet) {
+        resultsDiv.innerHTML = (`
+                <h3 class="results__cookie">${quizResults[3].cookie}</h3>
+                <p class="results__summary">${quizResults[3].description}</p>`
+        );
+    }   
 };
 
 /* ==========================================

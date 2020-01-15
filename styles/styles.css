@@ -351,10 +351,6 @@ input[type="radio"] {
   font-weight: 600;
 }
 
-.is-hidden {
-  display: none;
-}
-
 .header {
   height: 95vh;
   background-color: #0f4c81;
