@@ -19,32 +19,32 @@ $(':radio').prop('checked', false);
 
 // RESULTS DATA ============================
 
-    const quizResults = [
-        {
-            cookie: "Chocolate Chip Cookie",
-            description: "Congrats, you're average!  On the up side, you're generally likeable and the welcome addition to any get together",
-           
-        },
+const quizResults = [
+    {
+        cookie: "Chocolate Chip Cookie",
+        description: "Congrats, you're average!  On the up side, you're generally likeable and the welcome addition to any get together",
+        
+    },
 
-        {
-            cookie: "Red Velvet Chippet Cookie",
-            description: "Well aren't you annoyingly trendy?  You're exciting at first but people are tend to regret indulging too much in your company",
-           
-        },
+    {
+        cookie: "Red Velvet Chippet Cookie",
+        description: "Well aren't you annoyingly trendy?  You're exciting at first but people are tend to regret indulging too much in your company",
+        
+    },
 
-        {
-            cookie: "Gingerbread Cookie",
-            description: "You're not everyone's cup of tea, but those who like you really like you and those who don't really don't",
-            
-        },
+    {
+        cookie: "Gingerbread Cookie",
+        description: "You're not everyone's cup of tea, but those who like you really like you and those who don't really don't",
+        
+    },
 
-        {
-            cookie: "Biscotti",
-            description: "Honestly, people think they like you until they get to know you and they almost always regret bringing you to a party",
-           
-        },
+    {
+        cookie: "Biscotti",
+        description: "Honestly, people think they like you until they get to know you and they almost always regret bringing you to a party",
+        
+    },
 
-    ];
+];
     
 // USER ANSWER SELECTION: 
 // STORE SCORE FOR SELECTED ANSWER 
@@ -96,7 +96,7 @@ $(".quiz__form").on('submit', function(e) {
             );
         }
     
-    }); // END OF SCORING & RESULTS
+}); // END OF SCORING & RESULTS
 
 // DOCUMENT READY
 $('document').ready(() => {

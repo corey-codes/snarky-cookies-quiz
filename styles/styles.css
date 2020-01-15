@@ -237,28 +237,6 @@ img {
   width: 100%;
 }
 
-.header,
-.quiz,
-.resultsArea {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 3rem 0;
-}
-
-.quiz__header,
-.results__header {
-  margin: 2rem 0 6rem 0;
-  padding: 2rem;
-  text-align: center;
-}
-
-.results {
-  background-color: #8da4b0;
-  color: #fefbfd;
-  height: 70vh;
-}
-
 h1,
 h2,
 p {
@@ -317,11 +295,37 @@ label {
 }
 
 input[type="radio"] {
-  -webkit-transform: scale(2, 2);
-          transform: scale(2, 2);
+  -webkit-transform: scale(1.7, 1.7);
+          transform: scale(1.7, 1.7);
   margin-right: 1rem;
+  margin-left: 1rem;
 }
 
+.header,
+.quiz,
+.resultsArea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 3rem 0;
+}
+
+.quiz__header,
+.results__header {
+  margin: 2rem 0 6rem 0;
+  padding: 2rem;
+  text-align: center;
+}
+
+.results {
+  background-color: #0f4c81;
+  color: #fefbfd;
+  height: 70vh;
+}
+
+.header__playBtn,
+.quiz__nextBtn,
+.quiz__previousBtn,
 .quiz__resultsBtn {
   display: inline-block;
   border: none;
@@ -334,6 +338,9 @@ input[type="radio"] {
   border-radius: 10px;
 }
 
+.header__playBtn:hover,
+.quiz__nextBtn:hover,
+.quiz__previousBtn:hover,
 .quiz__resultsBtn:hover {
   -webkit-box-shadow: 6px 6px 5px #ccc;
           box-shadow: 6px 6px 5px #ccc;
@@ -344,18 +351,13 @@ input[type="radio"] {
   font-weight: 600;
 }
 
-ul {
-  padding-left: 0;
-  margin: 0;
-}
-
-ul li {
-  list-style: none;
+.is-hidden {
+  display: none;
 }
 
 .header {
   height: 95vh;
-  background-color: #8da4b0;
+  background-color: #0f4c81;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5))), url("../assets/emoji-cookie.jpg");
   background-image: linear-gradient(rgba(255, 255, 255, 0.5)), url("../assets/emoji-cookie.jpg");
   background-size: cover;
@@ -386,34 +388,16 @@ ul li {
   padding: 2rem;
 }
 
-.header__playBtn {
-  width: 20%;
-  margin: 2rem;
-  padding: 1.5rem;
-  border: none;
-  background-color: #9d346e;
-  color: #fefbfd;
-  padding: 2rem 3rem;
-  text-transform: uppercase;
-  font-size: 2rem;
-  font-weight: 600;
-  border-radius: 10px;
-}
-
-.header__playBtn:hover {
-  -webkit-box-shadow: 6px 6px 5px rgba(0, 0, 0, 0.4);
-          box-shadow: 6px 6px 5px rgba(0, 0, 0, 0.4);
-}
-
 .main {
-  background-color: #8da4b0;
+  background-color: #0f4c81;
 }
 
 .main .quiz {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.5))), url("../assets/med-blue-bite-me-iStock-687565362.jpg");
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5)), url("../assets/med-blue-bite-me-iStock-687565362.jpg");
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.6))), url("../assets/med-2blue-bite-me-iStock-687565362.jpg");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.6)), url("../assets/med-2blue-bite-me-iStock-687565362.jpg");
   background-size: contain;
   background-repeat: no-repeat;
+  height: 100vh;
 }
 
 .main .quiz__content {
@@ -453,17 +437,27 @@ ul li {
   padding-left: 2rem;
 }
 
-.main .quiz__resultsSubmit {
-  padding: 1rem;
-  margin: 1rem;
+.main .quiz__controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem 0;
+  margin: 2rem 0;
 }
 
-.main .quiz__showResults {
+.main .quiz__nextBtn, .main .quiz__previousBtn, .main .quiz__resultsBtn {
   text-align: center;
 }
 
-.main .quiz__showResults input button {
+.main .quiz__nextBtn input button, .main .quiz__previousBtn input button, .main .quiz__resultsBtn input button {
   font-size: 2rem;
+}
+
+.main .quiz__nextBtn {
+  padding: 2rem 50px;
 }
 
 .results {
