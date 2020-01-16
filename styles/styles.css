@@ -245,8 +245,7 @@ p {
 
 h1,
 h2,
-h3,
-.resultCookie {
+h3 {
   font-family: "Playfair Display", serif;
   margin: 2rem 0;
 }
@@ -304,7 +303,7 @@ input[type="radio"] {
 
 .header,
 .quiz,
-.resultsArea {
+.results {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -460,6 +459,13 @@ input[type="radio"] {
         -ms-flex-direction: column;
             flex-direction: column;
     text-align: center;
+  }
+  .main .quiz__img {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .main .quiz__img img {
+    width: 60%;
   }
   .main .quiz__questionList {
     width: 90%;

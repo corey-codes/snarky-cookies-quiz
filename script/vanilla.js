@@ -8,8 +8,6 @@ const app = {};
 
 ========================================= */
 
-const internalLinks = document.querySelectorAll('a[href^="#sectionLInk"');
-
 const playBtn = document.querySelector(".header__playBtn");
 
 const quizSection = document.querySelector("#quiz");
@@ -20,11 +18,11 @@ playBtn.addEventListener('click', function(e) {
     quizSection.scrollIntoView();
 });
 
-
 /* ==========================================
 
 - LISTEN FOR RADIO BUTTON SELECT
 - CLEAR RADIO BUTTONS ON PAGE REFRESH
+- SCROLL TO START ON REFRESH
 
 ========================================== */
 
@@ -33,6 +31,7 @@ const userChecked = document.querySelectorAll("input[type='radio']");
 window.onload = function() {
     for (let i = 0; i < userChecked.length; i++)
         userChecked[i].checked = false;
+    scrollTo(0,0);
 };
 
 /* ==========================================
@@ -79,6 +78,7 @@ const quizResults = [
 /* ==========================================
 
 - SET UP BUTTON CONTROLS
+- ADD HTML QUESTIONS INTO AN ARRAY TO LOOP OVER AND DISPLAY ONE BY ONE
 - SET UP QUESTIONS TO DISPLAY
 - FUNCTIONS TO APPLY TO BUTTONS
 
@@ -96,23 +96,16 @@ nextQ.addEventListener('click', function() {
 });
 
 // QUESTIONS
+
+const questions = []
+
 const q1 = document.querySelector("div.quiz__q1"); 
 const q2 = document.querySelector("div.quiz__q2"); 
 const q3 = document.querySelector("div.quiz__q3"); 
 const q4 = document.querySelector("div.quiz__q4"); 
 const q5 = document.querySelector("div.quiz__q5"); 
 
-//FUNCTIONS
-
-// function unHide() {
-//     if ()
-//     classList.remove('is-hidden')
-// }
-
-// function next() {
-//    nextQ.addEventListener('click', unHide) 
-// }
-// next();
+questions.push(q1, q2, q3, q4, q5);
 
 
 /* ==========================================
@@ -131,14 +124,14 @@ form.onsubmit =  function(e) {
     e.preventDefault();
 
     const result = form.querySelectorAll("input[type='radio']:checked")
-    console.log(result);
-    console.log(userChoice);
     
     if (result) {
         for (let i = 0; i < result.length; i++ ) {
             userChoice[result[i].value]++;
         }
-    } 
+    } if (result.length < 5) {
+        return alert('Please pick an aswer for each question & try again.');
+    }
 
     if (userChoice.chocolateChip >= userChoice.redVelvet && userChoice.chocolateChip >= userChoice.gingerbread && userChoice.chocolateChip > userChoice.biscotti) {
         resultsDiv.innerHTML = (`
@@ -165,28 +158,6 @@ form.onsubmit =  function(e) {
     }   
 };
 
-/* ==========================================
-
-- STORE USER SELECTION FOR EACH QUESTION
-
-========================================== */
-
-
-
-
-
-
-
-/* ======================================
-
-- PREVENT DEFAULT ON FORM SUBMIT
-- CONTROL BUTTONS - SHOW ON ANSWER CLICK
-- DON'T ALLOW PREVIOUS BTN ON FIRST QUESTION
-- HIDE NEXT BTN ON LAST QUESTION
-- SHOW SUBMIT BTN ON LAST QUESTION
-- ERROR HANDLING - CAN'T SUBMIT WITHOUT ANSWER SELECTION
-
-=========================================*/
 
 
 

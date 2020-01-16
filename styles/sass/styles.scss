@@ -39,8 +39,7 @@ p {
 
 h1,
 h2,
-h3,
-.resultCookie {
+h3 {
   font-family: $font-1;
   margin: 2rem 0;
 }
@@ -96,7 +95,7 @@ input[type="radio"] {
 
 .header,
 .quiz,
-.resultsArea {
+.results {
   display: flex;
   padding: 3rem 0;
 }
