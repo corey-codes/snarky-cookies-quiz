@@ -7,5 +7,5 @@ A fun interactive quiz to give you some insight into your personality's cookie e
 HTML <br>
 CSS3 <br>
 jQuery (original build)<br>
-JavaScript (recode in progress vs newStyles branch) <br>
+JavaScript (recode in progress via newStyles branch) <br>
 VSCode
