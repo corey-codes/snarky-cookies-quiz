@@ -1,12 +1,29 @@
 @media (max-width: 900px) {
-    .mainQuizContent {
-        display: inline-block;
+  .main {
+    .quiz {
+      &__content {
+        flex-direction: column;
+        // display: inline-block;
         text-align: center;
-        
-        .mainQuizQuestionList {
-            margin: 0 auto;
-            text-align: left;
+      }
+
+      &__img {
+        width: 100%;
+        margin-bottom: 2rem;
+        img {
+          width: 60%;
         }
+      }
+
+      &__questionList {
+        width: 90%;
+        // margin: 0 auto;
+        text-align: left;
+      }
+
+      &__resultsSubmit {
+        text-align: center;
+      }
     }
-        
+  }
 }
